@@ -31,7 +31,7 @@ def list_team_id(team_id: int, db: Session = Depends(get_db)):
     return service.list_team_by_id(db, team_id)
 
 
-@router.put("/{team_id}", response_model=TeamResponse)
+@router.put("/{team_id}")
 def update_team(team_id: int, item: TeamUpdate, db: Session = Depends(get_db)):
     updated = service.update_team(db, team_id, item.team_name)
     if not updated:

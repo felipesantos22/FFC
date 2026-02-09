@@ -9,6 +9,7 @@ class UserResponse(BaseModel):
     id: int
     user_name: str
     email: str
+    password: str
 
     class Config:
         model_config = ConfigDict(from_attributes=True)
@@ -22,4 +23,7 @@ class UserDelete(BaseModel):
     user_name: str
     email: str
     password: str
+
+class MessageResponse(BaseModel):
+    message: str
 

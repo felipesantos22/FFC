@@ -1,7 +1,5 @@
 from sqlalchemy.orm import Session
 from models.team_model import Team
-from schemas.team_schema import TeamCreate
-
 
 class TeamRepository:
 
